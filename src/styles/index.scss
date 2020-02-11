@@ -1,0 +1,17 @@
+@import 'variables';
+
+h1 {
+  color: $moirai;
+  font-family: moret, serif;
+  font-size: 24px;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  margin: 0;
+}
+
+html {
+  background-color: $oat-milk;
+}

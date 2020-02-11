@@ -1,0 +1,57 @@
+@import "../../styles/variables";
+
+
+.my-skills {
+    max-width: 360px;
+    border: 1px solid $barista-ed;
+    border-radius: 0 30px 30px 0;
+    background-color: $low-fat;
+    padding: 16px;
+    padding-left: 0;
+
+    h2 {
+        padding-left: 36px;
+        margin-bottom: 16px;
+    }
+
+    .MuiListItem {
+        &-root {
+            padding-left: 36px;
+        }
+
+        &-container {
+            border-radius: 0 30px 30px 0;
+
+            &:hover {
+                background-color: $pink-cushion;
+
+                .review-button {
+                    display: block;
+                }
+            }
+
+            .MuiListItemText-primary {
+                font-family: Noto Sans;
+            }
+
+
+            .review-button {
+                display: none;
+
+                .MuiButton-root {
+                    color: $low-fat;
+                }
+            }
+        }
+
+
+    }
+
+
+    .skill-item {
+        display: flex;
+        align-content: space-between;
+        text-decoration: none;
+        justify-items: center;
+    }
+}

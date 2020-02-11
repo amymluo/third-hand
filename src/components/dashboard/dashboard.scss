@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+.dashboard-container {
+
+    .past-projects-thumbnail {
+        width: 250px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 5px 30px 5px 30px;
+        border: 5px solid transparent;
+
+        &:hover {
+            border: 5px solid $pink-cushion;
+        }
+    }
+}

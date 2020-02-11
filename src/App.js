@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
+import theme from "./styles/materialTheme";
+import "./styles/App.scss";
+import {
+  Landing,
+  Dashboard,
+  AllProjects,
+  ProjectDetail,
+  Resources
+} from "./components/ComponentExports";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MuiThemeProvider theme={theme}>
+      <Router>
+        <Switch>
+          <Route exact path="/" render={() => <Landing />} />
+          <Route exact path="/dashboard" render={() => <Dashboard />} />
+          <Route exact path="/projects" render={() => <AllProjects />} />
+          <Route
+            exact
+            path="/project_detail"
+            render={() => <ProjectDetail />}
+          />
+          <Route exact path="/resources" render={() => <Resources />} />
+        </Switch>
+      </Router>
+    </MuiThemeProvider>
   );
 }
 
