@@ -4,7 +4,6 @@ import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import theme from "./styles/materialTheme";
 import "./styles/App.scss";
 import {
-  Landing,
   Dashboard,
   AllProjects,
   ProjectDetail,
@@ -16,7 +15,7 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <Landing />} />
+          <Route exact path="/" render={() => <Dashboard />} />
           <Route exact path="/dashboard" render={() => <Dashboard />} />
           <Route exact path="/projects" render={() => <AllProjects />} />
           <Route
