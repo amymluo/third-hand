@@ -1,37 +1,3 @@
-// import React from "react";
-// import { Card, CardContent, CardMedia } from "@material-ui/core";
-// import { withStyles } from "@material-ui/core/styles";
-// import "./ongoing.scss";
-
-// const styles = {
-//   card: {
-//     maxWidth: 345
-//   },
-//   media: {
-//     height: 0,
-//     paddingTop: "56.25%" // 16:9
-//   }
-// };
-
-// function OngoingProject(props) {
-//   const { classes } = props;
-
-//   return (
-//     <div className={classes.card}>
-//       <Card>
-//         <CardMedia
-//           className={classes.media}
-//           image={"tshirt.jpg"}
-//           title="boxy t shirt"
-//         />
-//         <CardContent>ongoing Project</CardContent>
-//       </Card>
-//     </div>
-//   );
-// }
-
-// export default withStyles(styles)(OngoingProject);
-
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";

@@ -1,7 +1,7 @@
 import React from "react";
 import { Navbar } from "../ComponentExports";
 import { Skills } from "./Skills";
-import { Grid } from "@material-ui/core";
+import { Grid, Card, CardMedia } from "@material-ui/core";
 import OngoingProject from "./OngoingProject";
 import "./dashboard.scss";
 
@@ -37,26 +37,32 @@ export function Dashboard(props) {
             <h1>Past Projects</h1>
           </Grid>
           <Grid item container spacing={4}>
-            <Grid item md={4} xs={6}>
-              <img
-                className="past-projects-thumbnail"
-                src={"tshirt.jpg"}
-                alt="t shirt"
-              />
+            <Grid item>
+              <Card className="past-projects-thumbnail">
+                <CardMedia
+                  image="tshirt.jpg"
+                  title="tshirt"
+                  style={{ width: "180px", height: "180px" }}
+                />
+              </Card>
             </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                className="past-projects-thumbnail"
-                src={"tshirt.jpg"}
-                alt="t shirt"
-              />
+            <Grid item>
+              <Card className="past-projects-thumbnail">
+                <CardMedia
+                  image="tshirt.jpg"
+                  title="tshirt"
+                  style={{ width: "180px", height: "180px" }}
+                />
+              </Card>
             </Grid>
-            <Grid item md={4} xs={6}>
-              <img
-                className="past-projects-thumbnail"
-                src={"tshirt.jpg"}
-                alt="t shirt"
-              />
+            <Grid item>
+              <Card className="past-projects-thumbnail">
+                <CardMedia
+                  image="tshirt.jpg"
+                  title="tshirt"
+                  style={{ width: "180px", height: "180px" }}
+                />
+              </Card>
             </Grid>
           </Grid>
         </Grid>
