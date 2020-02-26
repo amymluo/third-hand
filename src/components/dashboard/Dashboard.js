@@ -1,72 +1,50 @@
 import React from "react";
 import { Navbar } from "../ComponentExports";
-import { Skills } from "./Skills";
-import { Grid, Card, CardMedia } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import OngoingProject from "./OngoingProject";
+import { RecommendedProject } from "./RecommendedProject";
 import "./dashboard.scss";
 
 export function Dashboard(props) {
   return (
     <div className="dashboard-container">
       <Navbar activeTab="dashboard" />
-      <Grid
-        container
-        className="dashboard-content"
-        spacing={4}
-        style={{ width: "100%", margin: "0" }}
-      >
-        <Grid item md={3} style={{ marginTop: "64px", paddingLeft: "0" }}>
-          <Skills />
-        </Grid>
-        <Grid item container md={8}>
-          <Grid item xs={12}>
-            <h1>Ongoing Projects</h1>
-          </Grid>
-          <Grid item container spacing={2}>
-            <Grid item xs={12}>
-              <OngoingProject />
-            </Grid>
-            <Grid item xs={12}>
-              <OngoingProject />
-            </Grid>
-            <Grid item xs={12}>
+      <div className="dashboard">
+        <Typography variant="h1">My Projects</Typography>
+        <div className="dashboard-section">
+          <Typography variant="h2">In Progress</Typography>
+          <Grid container spacing={8} direction="column">
+            <Grid item>
               <OngoingProject />
             </Grid>
           </Grid>
-          <Grid item xs={12}>
-            <h1>Past Projects</h1>
-          </Grid>
-          <Grid item container spacing={4}>
+        </div>
+        <div className="dashboard-section">
+          <Typography variant="h2">Recommended Projects</Typography>
+          <Grid container spacing={8}>
             <Grid item>
-              <Card className="past-projects-thumbnail">
-                <CardMedia
-                  image="tshirt.jpg"
-                  title="tshirt"
-                  style={{ width: "180px", height: "180px" }}
-                />
-              </Card>
+              <RecommendedProject />
             </Grid>
             <Grid item>
-              <Card className="past-projects-thumbnail">
-                <CardMedia
-                  image="tshirt.jpg"
-                  title="tshirt"
-                  style={{ width: "180px", height: "180px" }}
-                />
-              </Card>
+              <RecommendedProject />
             </Grid>
             <Grid item>
-              <Card className="past-projects-thumbnail">
-                <CardMedia
-                  image="tshirt.jpg"
-                  title="tshirt"
-                  style={{ width: "180px", height: "180px" }}
-                />
-              </Card>
+              <RecommendedProject />
             </Grid>
           </Grid>
-        </Grid>
-      </Grid>
+        </div>
+        <div className="dashboard-section">
+          <Typography variant="h2">Completed Projects</Typography>
+          <Grid container spacing={10} direction="column">
+            <Grid item>
+              <OngoingProject />
+            </Grid>
+            <Grid item>
+              <OngoingProject />
+            </Grid>
+          </Grid>
+        </div>
+      </div>
     </div>
   );
 }

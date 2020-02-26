@@ -1,6 +1,11 @@
 @import '../../styles/variables.scss';
 
-.dashboard-container {
+.dashboard {
+    padding: 84px;
+
+    .dashboard-section {
+        margin-bottom: 72px;
+    }
 
     .past-projects-thumbnail {
         border-radius: 5px 30px 5px 30px;

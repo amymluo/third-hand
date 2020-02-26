@@ -2,7 +2,6 @@ import React from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import { ThemeProvider as MuiThemeProvider } from "@material-ui/core/styles";
 import theme from "./styles/materialTheme";
-import "./styles/App.scss";
 import {
   Dashboard,
   AllProjects,

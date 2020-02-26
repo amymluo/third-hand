@@ -1,0 +1,18 @@
+.recommended-project {
+
+    &__thumbnail {
+        width: 300px;
+        height: 375px;
+        background-color: rgb(134, 134, 134);
+        position: relative;
+        margin-top: 36px;
+        margin-bottom: 24px;
+
+        .level-tag {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+        }
+    }
+
+}

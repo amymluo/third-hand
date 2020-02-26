@@ -1,49 +1,43 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
-import { Tabs, Tab } from "@material-ui/core";
-import { Redirect } from "react-router-dom";
+import { Grid } from "@material-ui/core";
+import { Link } from "react-router-dom";
+import cx from "classnames";
 import "./navbar.scss";
 
 export function Navbar(props) {
-  const [activeTab, changeTab] = React.useState(props.activeTab);
-  const [redirect, setRedirect] = React.useState(false);
+  const { activeTab } = props;
 
-  const handleChange = (event, newTab) => {
-    setRedirect(true);
-    changeTab(newTab);
-  };
-
-  const CustomTab = withStyles(theme => ({
-    root: {
-      fontFamily: "Noto sans",
-      fontSize: 14,
-      textTransform: "capitalize"
-    },
-    selected: {
-      fontWeight: "bold"
-    },
-    wrapper: {
-      textTransform: "capitalize"
-    }
-  }))(props => <Tab disableRipple {...props} />);
-
-  if (redirect) {
-    return <Redirect to={`/${activeTab}`} />;
-  } else {
-    return (
-      <div className="navbar">
-        <div className="logo">Third Hand </div>
-        <Tabs
-          component="nav"
-          value={activeTab}
-          onChange={handleChange}
-          aria-label="navbar-links"
-        >
-          <CustomTab label="Dashboard" value="dashboard" />
-          <CustomTab label="Projects" value="projects" />
-          <CustomTab label="Resources" value="resources" />
-        </Tabs>
-      </div>
-    );
-  }
+  return (
+    <Grid className="navbar" container justify="space-between">
+      <Grid item container id="left" alignContent="center" spacing={3} sm={6}>
+        <Grid item>
+          <Link className="logo" to="/dashboard">
+            Third Hand
+          </Link>
+        </Grid>
+        <Grid item className={cx("tab", { active: activeTab === "projects" })}>
+          <Link to="/projects">Browse</Link>
+        </Grid>
+        <Grid item className={cx("tab", { active: activeTab === "resources" })}>
+          <Link to="/resources">Resources</Link>
+        </Grid>
+      </Grid>
+      <Grid
+        item
+        container
+        id="right"
+        sm={6}
+        alignContent="center"
+        justify="flex-end"
+        spacing={3}
+      >
+        <Grid item className={cx("tab", { active: activeTab === "dashboard" })}>
+          <Link to="/dashboard">My Projects</Link>
+        </Grid>
+        <Grid item>
+          <span className="tab">User</span>
+        </Grid>
+      </Grid>
+    </Grid>
+  );
 }
