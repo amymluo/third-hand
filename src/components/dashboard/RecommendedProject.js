@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import { LevelTag, CustomButton } from "../ComponentExports";
+import { Link } from "react-router-dom";
 import "./recommended.scss";
 
 export function RecommendedProject(props) {
@@ -13,7 +14,9 @@ export function RecommendedProject(props) {
       <Typography variant="h3" style={{ marginBottom: "24px" }}>
         Other Easy Project
       </Typography>
-      <CustomButton variant="outlined">Choose color - $16</CustomButton>
+      <CustomButton variant="outlined">
+        <Link to="/projects/1">Choose color - $16 </Link>
+      </CustomButton>
     </div>
   );
 }

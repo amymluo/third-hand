@@ -9,11 +9,11 @@ export function LevelTag(props) {
         backgroundColor: "#EFFF32",
         fontFamily: "Poppins",
         fontWeight: "500",
-        fontSize: "21px",
+        fontSize: "14px",
         color: "black",
         borderRadius: "4px",
-        padding: "4px 32px 6px 32px",
-        height: "32px",
+        padding: "4px 21px",
+        height: "21px",
         width: "fit-content"
       }}
     >

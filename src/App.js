@@ -14,15 +14,15 @@ function App() {
     <MuiThemeProvider theme={theme}>
       <Router>
         <Switch>
-          <Route exact path="/" render={() => <Dashboard />} />
           <Route exact path="/dashboard" render={() => <Dashboard />} />
           <Route exact path="/projects" render={() => <AllProjects />} />
           <Route
             exact
-            path="/project_detail"
-            render={() => <ProjectDetail />}
+            path="/projects/:projectId"
+            render={props => <ProjectDetail {...props} />}
           />
           <Route exact path="/resources" render={() => <Resources />} />
+          <Route exact path="/" render={() => <Dashboard />} />
         </Switch>
       </Router>
     </MuiThemeProvider>

@@ -1,17 +1,15 @@
 import React from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
+import { withStyles } from "@material-ui/core/styles";
 import { Typography, LinearProgress } from "@material-ui/core";
 import { LevelTag, CustomButton } from "../ComponentExports";
+import { Redirect, Link } from "react-router-dom";
 
 import "./ongoing.scss";
 
 export default function OngoingProject() {
   const CustomProgress = withStyles({
     root: {
-      height: 21,
+      height: 16,
       backgroundColor: "#D8D8D8"
     },
     bar: {
@@ -19,6 +17,11 @@ export default function OngoingProject() {
       backgroundColor: "#EFFF32"
     }
   })(LinearProgress);
+
+  // const viewDetails = () => {
+  //   console.log("ere");
+  //   return <Redirect to="/projects" />;
+  // };
 
   return (
     <div className="ongoing-project">
@@ -41,7 +44,7 @@ export default function OngoingProject() {
         />
         <div className="ongoing-project__content__button-row">
           <CustomButton variant="outlined" style={{ marginRight: "24px" }}>
-            Project Details
+            <Link to="/projects/1">Project Details</Link>
           </CustomButton>
           <CustomButton variant="contained" color="primary">
             Resume

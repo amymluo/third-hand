@@ -1,6 +1,7 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import { LevelTag, CustomButton } from "../ComponentExports";
+import { Link } from "react-router-dom";
 
 export function ProjectThumbnail(props) {
   return (
@@ -8,12 +9,12 @@ export function ProjectThumbnail(props) {
       <div
         className="project-thumbnail__photo"
         style={{
-          width: "300px",
-          height: "375px",
+          width: "264px",
+          height: "325px",
           backgroundColor: "gray",
           position: "relative",
           marginTop: "36px",
-          marginBottom: "24px"
+          marginBottom: "16px"
         }}
       >
         <div
@@ -23,13 +24,15 @@ export function ProjectThumbnail(props) {
           <LevelTag level={0} />
         </div>
       </div>
-      <Typography variant="h3" style={{ marginBottom: "24px" }}>
+      <Typography variant="h3" style={{ marginBottom: "8px" }}>
         Other Easy Project
       </Typography>
-      <Typography variant="body1">
+      <Typography variant="body1" style={{ marginBottom: "8px" }}>
         Recommended starter project for our beginner sewists
       </Typography>
-      <CustomButton variant="outlined">Choose color - $16</CustomButton>
+      <CustomButton variant="outlined">
+        <Link to="/projects/1">Choose color - $16 </Link>
+      </CustomButton>
     </div>
   );
 }

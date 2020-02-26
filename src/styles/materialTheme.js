@@ -9,37 +9,37 @@ const theme = createMuiTheme({
     h1: {
       fontFamily: "Poppins",
       fontWeight: 700,
-      fontSize: 48,
-      color: "black",
-      marginBottom: "48px"
-    },
-    h2: {
-      fontFamily: "Poppins",
-      fontWeight: 700,
       fontSize: 36,
       color: "black",
       marginBottom: "36px"
     },
-    h3: {
+    h2: {
       fontFamily: "Poppins",
       fontWeight: 700,
       fontSize: 28,
+      color: "black",
+      marginBottom: "28px"
+    },
+    h3: {
+      fontFamily: "Poppins",
+      fontWeight: 700,
+      fontSize: 18,
       color: "black"
     },
     body1: {
       fontFamily: "Poppins",
-      fontSize: 18
+      fontSize: 14
     },
     subtitle1: {
       fontFamily: "Poppins",
       fontWeight: 500,
-      fontSize: 24,
+      fontSize: 16,
       color: "black"
     },
     subtitle2: {
       fontFamily: "Poppins",
       fontWeight: 500,
-      fontSize: 21,
+      fontSize: 16,
       color: "black",
       textTransform: "uppercase"
     }

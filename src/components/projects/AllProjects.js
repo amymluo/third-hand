@@ -12,10 +12,7 @@ export function AllProjects(props) {
         <Typography variant="h1">Browse Projects</Typography>
         <div className="project-section">
           <Typography variant="h2">Start from Scratch</Typography>
-          <Typography
-            variant="body1"
-            style={{ marginTop: "-24px", marginBottom: "36px" }}
-          >
+          <Typography variant="body1" style={{ marginTop: "-16px" }}>
             Made by you, for you (or somebody else)
           </Typography>
           <Grid container spacing={10}>
@@ -45,10 +42,7 @@ export function AllProjects(props) {
         />
         <div className="project-section">
           <Typography variant="h2">Repair + Embellish</Typography>
-          <Typography
-            variant="body1"
-            style={{ marginTop: "-24px", marginBottom: "36px" }}
-          >
+          <Typography variant="body1" style={{ marginTop: "-16px" }}>
             Because clothes worth wearing are worth repairing.
           </Typography>
           <Grid container spacing={10}>
