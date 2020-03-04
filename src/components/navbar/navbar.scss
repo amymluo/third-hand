@@ -5,6 +5,7 @@
   height: 60px;
   margin: 0;
   flex-wrap: nowrap;
+  padding: 0 16px;
 
   background-color: black;
 
@@ -41,22 +42,11 @@
   #right {
     margin: 0;
   }
+
+  &-user {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+  }
 }
-
-// .navbar {
-//   width: 100%;
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-//   padding-left: 36px;
-//   box-sizing: border-box;
-
-//   background-color: $low-fat;
-
-//   .logo {
-//     font-family: "moret", serif;
-//     font-size: 24px;
-//     color: $moirai;
-//     padding-right: 36px;
-//   }
-// }

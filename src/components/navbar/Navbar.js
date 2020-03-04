@@ -3,22 +3,35 @@ import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import cx from "classnames";
 import "./navbar.scss";
+import { CustomButton } from "../Button";
+import { CartIcon } from "../icons";
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
 export function Navbar(props) {
-  const { activeTab } = props;
+  const { activeTab, isAuthenticated, login, signOut } = props;
 
   return (
     <Grid className="navbar" container justify="space-between">
       <Grid item container id="left" alignContent="center" spacing={3} sm={6}>
         <Grid item>
-          <Link className="logo" to="/dashboard">
+          <Link className="logo" to="/">
             Third Hand
           </Link>
         </Grid>
-        <Grid item className={cx("tab", { active: activeTab === "projects" })}>
+        <Grid
+          item
+          className={cx("tab", {
+            active: activeTab && activeTab === "projects"
+          })}
+        >
           <Link to="/projects">Browse</Link>
         </Grid>
-        <Grid item className={cx("tab", { active: activeTab === "resources" })}>
+        <Grid
+          item
+          className={cx("tab", {
+            active: activeTab && activeTab === "resources"
+          })}
+        >
           <Link to="/resources">Resources</Link>
         </Grid>
       </Grid>
@@ -31,12 +44,42 @@ export function Navbar(props) {
         justify="flex-end"
         spacing={3}
       >
-        <Grid item className={cx("tab", { active: activeTab === "dashboard" })}>
-          <Link to="/dashboard">My Projects</Link>
-        </Grid>
-        <Grid item>
-          <span className="tab">User</span>
-        </Grid>
+        {isAuthenticated ? (
+          <React.Fragment>
+            <Grid
+              item
+              className={cx("tab", {
+                active: activeTab && activeTab === "dashboard"
+              })}
+            >
+              <Link to="/dashboard">My Projects</Link>
+            </Grid>
+            <Grid item className="tab">
+              <CartIcon fontSize="large" />
+            </Grid>
+            <Grid item className="tab">
+              <div className="navbar-user" onClick={signOut}>
+                <AccountCircleIcon color="secondary" fontSize="large" />
+                <span
+                  style={{ marginLeft: "8px", textTransform: "capitalize" }}
+                >
+                  User
+                </span>
+              </div>
+            </Grid>
+          </React.Fragment>
+        ) : (
+          <React.Fragment>
+            <Grid item className="tab">
+              <CartIcon fontSize="large" />
+            </Grid>
+            <Grid item className="tab" style={{ padding: "0 12px" }}>
+              <CustomButton variant="contained" onClick={login} size="small">
+                Sign Up
+              </CustomButton>
+            </Grid>
+          </React.Fragment>
+        )}
       </Grid>
     </Grid>
   );
