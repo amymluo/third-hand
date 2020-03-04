@@ -1,5 +1,4 @@
 import React from "react";
-import { Navbar } from "../ComponentExports";
 import { ProjectThumbnail } from "./ProjectThumbnail";
 import { Grid, Typography, Divider } from "@material-ui/core";
 import "./projects.scss";

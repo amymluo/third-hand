@@ -1,4 +1,4 @@
-import { Landing } from "./Landing";
+import { Landing } from "./landing/Landing";
 import { Dashboard } from "./dashboard/Dashboard";
 import { AllProjects } from "./projects/AllProjects";
 import { ProjectDetail } from "./projects/ProjectDetail";

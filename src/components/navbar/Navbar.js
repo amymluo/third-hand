@@ -3,7 +3,7 @@ import { Grid } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import cx from "classnames";
 import "./navbar.scss";
-import { CustomButton } from "../Button";
+import { CustomButton } from "../ComponentExports";
 import { CartIcon } from "../icons";
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 
