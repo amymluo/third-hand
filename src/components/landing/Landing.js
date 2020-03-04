@@ -2,6 +2,7 @@ import React from "react";
 import { CustomButton } from "../ComponentExports";
 import "./landing.scss";
 import { Grid, Typography, Divider } from "@material-ui/core";
+import { ProjectThumbnail } from "../projects/ProjectThumbnail";
 
 export function Landing(props) {
   return (
@@ -105,6 +106,64 @@ export function Landing(props) {
         variant="middle"
         style={{ backgroundColor: "black", height: "3px", margin: "84px 0" }}
       />
+      <div className="landing__project-section">
+        <Typography variant="h2">Start from Scratch</Typography>
+        <Typography
+          variant="body1"
+          className="landing__project-section__description"
+        >
+          Made by you, for you (or somebody else)
+        </Typography>
+        <CustomButton
+          variant="contained"
+          color="primary"
+          className="landing__project-section__button"
+        >
+          See More
+        </CustomButton>
+        <Grid container spacing={10}>
+          <Grid item>
+            <ProjectThumbnail />
+          </Grid>
+          <Grid item>
+            <ProjectThumbnail />
+          </Grid>
+          <Grid item>
+            <ProjectThumbnail />
+          </Grid>
+        </Grid>
+      </div>
+      <Divider
+        variant="middle"
+        style={{ backgroundColor: "black", height: "3px", margin: "84px 0" }}
+      />
+      <div className="landing__project-section">
+        <Typography variant="h2">Repair + Embellish</Typography>
+        <Typography
+          variant="body1"
+          className="landing__project-section__description"
+        >
+          Because clothes worth wearing are worth repairing.
+        </Typography>
+        <CustomButton
+          variant="contained"
+          color="primary"
+          className="landing__project-section__button"
+        >
+          See More
+        </CustomButton>
+        <Grid container spacing={10}>
+          <Grid item>
+            <ProjectThumbnail />
+          </Grid>
+          <Grid item>
+            <ProjectThumbnail />
+          </Grid>
+          <Grid item>
+            <ProjectThumbnail />
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 }
