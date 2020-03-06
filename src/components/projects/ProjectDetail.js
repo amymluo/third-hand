@@ -3,12 +3,23 @@ import {
   LessonOutline,
   LevelTag,
   CustomButton,
-  ProjectReviews
+  ProjectReviews,
+  CustomizeProject
 } from "../ComponentExports";
 import { Grid, Typography } from "@material-ui/core";
 import "./project-detail.scss";
 
 export function ProjectDetail(props) {
+  const [open, setOpen] = React.useState(true); //false
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = value => {
+    setOpen(false);
+  };
+
   return (
     <div className="project-detail">
       <div className="project-detail__overview">
@@ -25,7 +36,11 @@ export function ProjectDetail(props) {
             </div>
           </Grid>
           <Grid item>
-            <CustomButton variant="contained" color="primary">
+            <CustomButton
+              variant="contained"
+              color="primary"
+              onClick={handleClickOpen}
+            >
               customize & add to cart
             </CustomButton>
           </Grid>
@@ -98,6 +113,7 @@ export function ProjectDetail(props) {
       <div className="project-detail__reviews">
         <ProjectReviews />
       </div>
+      <CustomizeProject onClose={handleClose} open={open} />
     </div>
   );
 }
