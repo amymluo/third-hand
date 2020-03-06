@@ -2,7 +2,7 @@ import React from "react";
 import { withStyles } from "@material-ui/core/styles";
 import { Typography, LinearProgress } from "@material-ui/core";
 import { LevelTag, CustomButton } from "../ComponentExports";
-import { Redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./ongoing.scss";
 
@@ -17,11 +17,6 @@ export default function OngoingProject() {
       backgroundColor: "#EFFF32"
     }
   })(LinearProgress);
-
-  // const viewDetails = () => {
-  //   console.log("ere");
-  //   return <Redirect to="/projects" />;
-  // };
 
   return (
     <div className="ongoing-project">

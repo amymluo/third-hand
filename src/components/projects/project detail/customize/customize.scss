@@ -1,0 +1,50 @@
+@import '../../../../styles/variables.scss';
+
+.customize-dialog {
+
+    &__tab {
+        width: 1000px !important;
+        height: 900px;
+        padding: 36px;
+        padding-top: 16px;
+        ;
+    }
+
+    &__img {
+        margin: auto;
+        display: block;
+    }
+
+    &__estimated {
+        background-color: $neon;
+        border-radius: 4px;
+        text-align: center;
+        width: fit-content;
+        margin: auto;
+        padding: 16px 24px;
+
+        h2 {
+            margin: 0;
+        }
+    }
+
+    .selection-row {
+        margin-bottom: 16px;
+
+        h4 {
+            margin-bottom: 4px;
+        }
+
+        .selection-option {
+            width: 80px;
+            height: 80px;
+            border-radius: 3px;
+            background-color: gray;
+            border: 3px solid transparent;
+
+            &__selected {
+                border: 3px solid black;
+            }
+        }
+    }
+}

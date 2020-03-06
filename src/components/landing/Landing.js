@@ -1,7 +1,7 @@
 import React from "react";
 import { CustomButton, CustomDivider } from "../ComponentExports";
 import "./landing.scss";
-import { Grid, Typography, Divider } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { ProjectThumbnail } from "../projects/ProjectThumbnail";
 
 export function Landing(props) {

@@ -4,7 +4,7 @@ import { AllProjects } from "./projects/AllProjects";
 import { ProjectDetail } from "./projects/project detail/ProjectDetail";
 import { LessonOutline } from "./projects/project detail/LessonOutline";
 import { ProjectReviews } from "./projects/project detail/ProjectReviews";
-import { CustomizeProject } from "./projects/project detail/CustomizeProject";
+import { CustomizeProject } from "./projects/project detail/customize/CustomizeProject";
 import { LessonStep } from "./projects/LessonStep";
 import { Navbar } from "./navbar/Navbar";
 import { Resources } from "./Resources";

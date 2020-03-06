@@ -1,6 +1,6 @@
 import React from "react";
 import { ProjectThumbnail } from "./ProjectThumbnail";
-import { Grid, Typography, Divider } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import "./projects.scss";
 import { CustomDivider } from "../ComponentExports";
 
