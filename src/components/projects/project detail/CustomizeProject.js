@@ -1,11 +1,5 @@
 import React from "react";
-import { Dialog, Tabs, Tab, Box, Typography, Grid } from "@material-ui/core";
-
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
-  return <div className="tabpanel">{value === index && children}</div>;
-}
+import { Dialog, Tabs, Tab, Typography, Grid } from "@material-ui/core";
 
 export function CustomizeProject(props) {
   const { onClose, open } = props;
@@ -17,7 +11,7 @@ export function CustomizeProject(props) {
   };
 
   return (
-    <Dialog onClose={onClose} open={open} maxWidth="false">
+    <Dialog onClose={onClose} open={open} maxWidth={false}>
       <Tabs value={value} onChange={handleChange} indicatorColor="primary">
         <Tab label="customize style" />
         <Tab label="select size" />

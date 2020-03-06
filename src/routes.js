@@ -13,7 +13,8 @@ import {
   ProjectDetail,
   Resources,
   Landing,
-  Navbar
+  Navbar,
+  LessonStep
 } from "./components/ComponentExports";
 
 export const fakeAuth = {
@@ -59,7 +60,20 @@ function App() {
           <Route
             exact
             path="/projects/:projectId"
-            render={props => <ProjectDetail {...props} />}
+            render={props => (
+              <ProjectDetail isAuthenticated={isAuthenticated} {...props} />
+            )}
+          />
+          <Route
+            exact
+            path="/projects/:projectId/:stepId"
+            render={props =>
+              isAuthenticated ? (
+                <LessonStep {...props} />
+              ) : (
+                <Redirect to={`/projects/${props.match.params.projectId}`} />
+              )
+            }
           />
           <Route exact path="/resources" render={() => <Resources />} />
           <Route

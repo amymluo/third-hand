@@ -5,8 +5,9 @@ import {
   CustomButton,
   ProjectReviews,
   CustomizeProject
-} from "../ComponentExports";
+} from "../../ComponentExports";
 import { Grid, Typography } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import "./project-detail.scss";
 
 export function ProjectDetail(props) {
@@ -36,13 +37,19 @@ export function ProjectDetail(props) {
             </div>
           </Grid>
           <Grid item>
-            <CustomButton
-              variant="contained"
-              color="primary"
-              onClick={handleClickOpen}
-            >
-              customize & add to cart
-            </CustomButton>
+            {props.isAuthenticated ? (
+              <CustomButton variant="contained" color="primary">
+                <Link to={"/projects/1/1"}>Resume</Link>
+              </CustomButton>
+            ) : (
+              <CustomButton
+                variant="contained"
+                color="primary"
+                onClick={handleClickOpen}
+              >
+                customize & add to cart
+              </CustomButton>
+            )}
           </Grid>
         </Grid>
         <Typography variant="body1" style={{ marginBottom: "36px" }}>

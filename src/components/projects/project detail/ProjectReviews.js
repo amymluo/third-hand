@@ -7,7 +7,7 @@ import {
   MenuItem
 } from "@material-ui/core";
 import StarIcon from "@material-ui/icons/Star";
-import { CustomDivider } from "../ComponentExports";
+import { CustomDivider } from "../../ComponentExports";
 
 function Review(props) {
   const state = {
@@ -32,8 +32,8 @@ function Review(props) {
           </div>
           <p>Beginner</p>
           <Grid container spacing={1}>
-            {state.photos.map(photo => (
-              <Grid item>
+            {state.photos.map((photo, index) => (
+              <Grid item key={index}>
                 <img src={photo} alt="review" width="100px" />
               </Grid>
             ))}
@@ -103,7 +103,7 @@ export function ProjectReviews(props) {
             <Typography variant="subtitle2">sort by</Typography>
           </Grid>
           <Grid item>
-            <FormControl variant="filled" dense>
+            <FormControl variant="filled">
               <Select value={sortBy} onChange={handleChange}>
                 <MenuItem value={0}>Most recent</MenuItem>
                 <MenuItem value={1}>High - Low</MenuItem>
