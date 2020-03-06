@@ -11,7 +11,7 @@ export function RecommendedProject(props) {
       <div className="recommended-project__thumbnail">
         <LevelTag level={0} />
       </div>
-      <Typography variant="h3" style={{ marginBottom: "24px" }}>
+      <Typography variant="h4" style={{ marginBottom: "24px" }}>
         Other Easy Project
       </Typography>
       <CustomButton variant="outlined">

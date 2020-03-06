@@ -1,6 +1,5 @@
 import { SvgIcon } from "@material-ui/core";
 import React from "react";
-// import icon from "../../public/assets/Icons/Global/cart.svg";
 
 export function CartIcon(props) {
   return (

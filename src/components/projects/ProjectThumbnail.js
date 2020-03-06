@@ -24,7 +24,7 @@ export function ProjectThumbnail(props) {
           <LevelTag level={0} />
         </div>
       </div>
-      <Typography variant="h3" style={{ marginBottom: "8px" }}>
+      <Typography variant="h4" style={{ marginBottom: "8px" }}>
         Other Easy Project
       </Typography>
       <Typography variant="body1" style={{ marginBottom: "8px" }}>

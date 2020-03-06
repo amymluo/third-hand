@@ -1,4 +1,6 @@
 import React from "react";
+import { Button, Divider } from "@material-ui/core";
+import { withStyles } from "@material-ui/styles";
 
 export function LevelTag(props) {
   const levels = ["Beginner", "Easy", "Intermediate", "Advanced"];
@@ -21,3 +23,21 @@ export function LevelTag(props) {
     </div>
   );
 }
+
+export const CustomButton = withStyles({
+  root: {
+    fontFamily: "Poppins",
+    textTransform: "uppercase",
+    fontSize: "14px",
+    fontWeight: "600",
+    letterSpacing: "2px",
+    padding: "8px 40px"
+  }
+})(Button);
+
+export const CustomDivider = () => (
+  <Divider
+    variant="middle"
+    style={{ backgroundColor: "black", height: "3px", margin: "64px 0" }}
+  />
+);

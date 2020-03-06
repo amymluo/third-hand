@@ -2,18 +2,22 @@ import { Landing } from "./landing/Landing";
 import { Dashboard } from "./dashboard/Dashboard";
 import { AllProjects } from "./projects/AllProjects";
 import { ProjectDetail } from "./projects/ProjectDetail";
+import { LessonOutline } from "./projects/LessonOutline";
 import { Navbar } from "./navbar/Navbar";
 import { Resources } from "./Resources";
-import { LevelTag } from "./LevelTag";
-import { CustomButton } from "./Button";
+import { LevelTag, CustomButton, CustomDivider } from "./sharedComponents";
+import { ProjectReviews } from "./projects/ProjectReviews";
 
 export {
   Landing,
   Dashboard,
   AllProjects,
   ProjectDetail,
+  LessonOutline,
+  ProjectReviews,
   Navbar,
   Resources,
   LevelTag,
-  CustomButton
+  CustomButton,
+  CustomDivider
 };

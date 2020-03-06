@@ -2,6 +2,7 @@ import React from "react";
 import { ProjectThumbnail } from "./ProjectThumbnail";
 import { Grid, Typography, Divider } from "@material-ui/core";
 import "./projects.scss";
+import { CustomDivider } from "../ComponentExports";
 
 export function AllProjects(props) {
   return (
@@ -33,10 +34,7 @@ export function AllProjects(props) {
           </Grid>
         </Grid>
       </div>
-      <Divider
-        variant="middle"
-        style={{ backgroundColor: "black", height: "3px", margin: "84px 0" }}
-      />
+      <CustomDivider />
       <div className="project-section">
         <Typography variant="h2">Repair + Embellish</Typography>
         <Typography variant="body1" style={{ marginTop: "-16px" }}>

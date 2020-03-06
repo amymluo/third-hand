@@ -23,6 +23,12 @@ const theme = createMuiTheme({
     h3: {
       fontFamily: "Poppins",
       fontWeight: 700,
+      fontSize: 24,
+      color: "black"
+    },
+    h4: {
+      fontFamily: "Poppins",
+      fontWeight: 700,
       fontSize: 18,
       color: "black"
     },

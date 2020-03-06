@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomButton } from "../ComponentExports";
+import { CustomButton, CustomDivider } from "../ComponentExports";
 import "./landing.scss";
 import { Grid, Typography, Divider } from "@material-ui/core";
 import { ProjectThumbnail } from "../projects/ProjectThumbnail";
@@ -102,10 +102,7 @@ export function Landing(props) {
           </div>
         </Grid>
       </Grid>
-      <Divider
-        variant="middle"
-        style={{ backgroundColor: "black", height: "3px", margin: "84px 0" }}
-      />
+      <CustomDivider />
       <div className="landing__project-section">
         <Typography variant="h2">Start from Scratch</Typography>
         <Typography
@@ -133,10 +130,7 @@ export function Landing(props) {
           </Grid>
         </Grid>
       </div>
-      <Divider
-        variant="middle"
-        style={{ backgroundColor: "black", height: "3px", margin: "84px 0" }}
-      />
+      <CustomDivider />
       <div className="landing__project-section">
         <Typography variant="h2">Repair + Embellish</Typography>
         <Typography
