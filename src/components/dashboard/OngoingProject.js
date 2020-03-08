@@ -42,7 +42,7 @@ export default function OngoingProject() {
             <Link to="/projects/1">Project Details</Link>
           </CustomButton>
           <CustomButton variant="contained" color="primary">
-            Resume
+            <Link to="/projects/1/1">Resume</Link>
           </CustomButton>
         </div>
       </div>

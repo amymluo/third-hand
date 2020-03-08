@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 import "./project-detail.scss";
 
 export function ProjectDetail(props) {
-  const [open, setOpen] = React.useState(true); //false
+  const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);

@@ -2,36 +2,43 @@ import React from "react";
 import { Typography } from "@material-ui/core";
 import { LevelTag, CustomButton } from "../ComponentExports";
 import { Link } from "react-router-dom";
+import { projects } from "../../data/projectsData";
 
 export function ProjectThumbnail(props) {
+  const projectData = projects[props.projectId];
+
   return (
-    <div className="project-thumbnail" style={{ width: "300px" }}>
-      <div
+    <div
+      className="project-thumbnail"
+      style={{ width: "300px", position: "relative" }}
+    >
+      <img
         className="project-thumbnail__photo"
+        src={projectData.img}
         style={{
           width: "264px",
           height: "325px",
-          backgroundColor: "gray",
-          position: "relative",
           marginTop: "36px",
           marginBottom: "16px"
         }}
+        alt="project thumbnail"
+      />
+      <div
+        className="project-level"
+        style={{ position: "absolute", top: "44px", right: "44px" }}
       >
-        <div
-          className="project-level"
-          style={{ position: "absolute", top: "8px", right: "8px" }}
-        >
-          <LevelTag level={0} />
-        </div>
+        <LevelTag level={projectData.level} />
       </div>
       <Typography variant="h4" style={{ marginBottom: "8px" }}>
-        Other Easy Project
+        {projectData.title}
       </Typography>
       <Typography variant="body1" style={{ marginBottom: "8px" }}>
-        Recommended starter project for our beginner sewists
+        {projectData.description}
       </Typography>
       <CustomButton variant="outlined">
-        <Link to="/projects/1">Choose color - $16 </Link>
+        <Link to={`/projects/${props.projectId}`}>
+          {projectData.buttonText}
+        </Link>
       </CustomButton>
     </div>
   );

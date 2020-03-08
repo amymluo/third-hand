@@ -1,0 +1,33 @@
+@import "../../styles/variables.scss";
+
+.lesson-content {
+    padding: 48px 84px;
+
+    &__step {
+        margin-bottom: 24px;
+
+
+        &__text {
+            display: flex;
+
+            p {
+                margin-top: 8px;
+            }
+        }
+
+
+        &__num {
+            width: 50px;
+            height: 50px;
+            background-color: $neon;
+            border-radius: 50%;
+            flex: none;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 16px;
+        }
+
+    }
+}

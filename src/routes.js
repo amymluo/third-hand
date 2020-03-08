@@ -14,23 +14,11 @@ import {
   Resources,
   Landing,
   Navbar,
-  LessonStep
+  LessonContent
 } from "./components/ComponentExports";
 
-export const fakeAuth = {
-  isAuthenticated: false,
-  authenticate(cb) {
-    this.isAuthenticated = true;
-    setTimeout(cb, 100);
-  },
-  signout(cb) {
-    this.isAuthenticated = false;
-    setTimeout(cb, 100);
-  }
-};
-
 function App() {
-  const [isAuthenticated, setAuthenticated] = React.useState(false);
+  const [isAuthenticated, setAuthenticated] = React.useState(true); // false
 
   const login = () => {
     setAuthenticated(true);
@@ -66,10 +54,10 @@ function App() {
           />
           <Route
             exact
-            path="/projects/:projectId/:stepId"
+            path="/projects/:projectId/:lessonId"
             render={props =>
               isAuthenticated ? (
-                <LessonStep {...props} />
+                <LessonContent {...props} />
               ) : (
                 <Redirect to={`/projects/${props.match.params.projectId}`} />
               )
