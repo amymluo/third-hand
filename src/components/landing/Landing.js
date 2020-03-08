@@ -3,6 +3,7 @@ import { CustomButton, CustomDivider } from "../ComponentExports";
 import "./landing.scss";
 import { Grid, Typography } from "@material-ui/core";
 import { ProjectThumbnail } from "../projects/ProjectThumbnail";
+import { Link } from "react-router-dom";
 
 export function Landing(props) {
   return (
@@ -116,7 +117,7 @@ export function Landing(props) {
           color="primary"
           className="landing__project-section__button"
         >
-          See More
+          <Link to="/projects">See More</Link>
         </CustomButton>
         <Grid container spacing={10}>
           <Grid item>
@@ -144,7 +145,7 @@ export function Landing(props) {
           color="primary"
           className="landing__project-section__button"
         >
-          See More
+          <Link to="/projects">See More</Link>
         </CustomButton>
         <Grid container spacing={10}>
           <Grid item>
