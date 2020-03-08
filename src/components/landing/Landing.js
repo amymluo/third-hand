@@ -120,13 +120,13 @@ export function Landing(props) {
         </CustomButton>
         <Grid container spacing={10}>
           <Grid item>
-            <ProjectThumbnail />
+            <ProjectThumbnail projectId={0} />
           </Grid>
           <Grid item>
-            <ProjectThumbnail />
+            <ProjectThumbnail projectId={1} />
           </Grid>
           <Grid item>
-            <ProjectThumbnail />
+            <ProjectThumbnail projectId={2} />
           </Grid>
         </Grid>
       </div>
@@ -148,13 +148,13 @@ export function Landing(props) {
         </CustomButton>
         <Grid container spacing={10}>
           <Grid item>
-            <ProjectThumbnail />
+            <ProjectThumbnail projectId={3} />
           </Grid>
           <Grid item>
-            <ProjectThumbnail />
+            <ProjectThumbnail projectId={4} />
           </Grid>
           <Grid item>
-            <ProjectThumbnail />
+            <ProjectThumbnail projectId={5} />
           </Grid>
         </Grid>
       </div>
