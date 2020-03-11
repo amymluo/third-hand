@@ -44,7 +44,7 @@ const theme = createMuiTheme({
     },
     subtitle2: {
       fontFamily: "Poppins",
-      fontWeight: 500,
+      fontWeight: 600,
       fontSize: 16,
       color: "black",
       textTransform: "uppercase"

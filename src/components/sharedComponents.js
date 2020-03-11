@@ -30,7 +30,7 @@ export const CustomButton = withStyles({
     textTransform: "uppercase",
     fontSize: "14px",
     fontWeight: "600",
-    letterSpacing: "2px",
+    letterSpacing: "1.5px",
     padding: "8px 40px"
   }
 })(Button);

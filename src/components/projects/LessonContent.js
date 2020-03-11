@@ -1,9 +1,10 @@
 import React from "react";
-import { Typography, Grid, Button } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 import { lessons } from "../../data/lessonData";
 import { Link } from "react-router-dom";
 
 import "./lesson-content.scss";
+import { CustomButton } from "../sharedComponents";
 
 export function LessonContent(props) {
   const { projectId, lessonId } = props.match.params;
@@ -26,7 +27,7 @@ export function LessonContent(props) {
             >
               <Grid item sm={6} className="lesson-content__step__text">
                 <div className="lesson-content__step__num">{index + 1}</div>
-                <Typography variant="body1">{step.text}</Typography>
+                <Typography variant="body1">{`${step.text}`}</Typography>
               </Grid>
               <Grid item sm={6}>
                 {step.img && <img src={step.img} alt="step" />}
@@ -35,9 +36,13 @@ export function LessonContent(props) {
           );
         })}
         {hasNextLesson && (
-          <Button variant="contained" color="primary">
+          <CustomButton
+            variant="contained"
+            color="primary"
+            style={{ marginTop: "16px" }}
+          >
             <Link to={`/projects/${projectId}/${nextLessonId}`}>Next Step</Link>
-          </Button>
+          </CustomButton>
         )}
       </div>
     </div>

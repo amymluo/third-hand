@@ -33,7 +33,7 @@ function Review(props) {
         <Grid item sm={8}>
           <Grid container justify="space-between">
             <Grid item>
-              <Rating value={rating} precision={0.1} />
+              <Rating value={parseInt(rating)} precision={0.1} readOnly />
             </Grid>
             <Grid item>{date}</Grid>
           </Grid>
@@ -96,8 +96,8 @@ export function ProjectReviews(props) {
           </Grid>
         </Grid>
       </Grid>
-      {reviews.map(review => {
-        return <Review {...review} />;
+      {reviews.map((review, index) => {
+        return <Review {...review} key={index} />;
       })}
     </div>
   );
