@@ -4,7 +4,9 @@ import {
   LevelTag,
   CustomButton,
   ProjectReviews,
-  CustomizeProject
+  CustomizeProject,
+  ProjectGallery,
+  Commitment
 } from "../../ComponentExports";
 import { Grid, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -117,8 +119,14 @@ export function ProjectDetail(props) {
           </ul>
         </div>
       </div>
-      <div className="project-detail__reviews">
+      <div className="project-detail__section">
         <ProjectReviews />
+      </div>
+      <div className="project-detail__section">
+        <ProjectGallery />
+      </div>
+      <div className="project-detail__section">
+        <Commitment />
       </div>
       <CustomizeProject onClose={handleClose} open={open} />
     </div>

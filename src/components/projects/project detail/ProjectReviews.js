@@ -6,54 +6,41 @@ import {
   Select,
   MenuItem
 } from "@material-ui/core";
+import Rating from "@material-ui/lab/Rating";
 import StarIcon from "@material-ui/icons/Star";
 import { CustomDivider } from "../../ComponentExports";
+import { reviews } from "../../../data/reviews";
 
 function Review(props) {
-  const state = {
-    username: "sewinglady101",
-    level: "beginner",
-    rating: "4",
-    title: "loved this kit!",
-    review:
-      "I’ve only ever sewn for the first time in Project 1, and this was the perfect second step. It took a bit longer than 5 hours, but it’s worth the cute shirt!",
-    date: "02/26/2020",
-    photos: [
-      "/assets/photos/project detail/reviews/review1.png",
-      "/assets/photos/project detail/reviews/review2.png"
-    ]
-  };
+  const { username, level, rating, date, title, review, photos } = props;
   return (
     <React.Fragment>
       <Grid container spacing={4} className="review">
         <Grid item sm={4}>
           <div>
-            <b>{state.username}</b>
+            <b>{username}</b>
           </div>
-          <p>Beginner</p>
+          <p>{level}</p>
           <Grid container spacing={1}>
-            {state.photos.map((photo, index) => (
-              <Grid item key={index}>
-                <img src={photo} alt="review" width="100px" />
-              </Grid>
-            ))}
+            {photos &&
+              photos.map((photo, index) => (
+                <Grid item key={index}>
+                  <img src={photo} alt="review" width="100px" />
+                </Grid>
+              ))}
           </Grid>
         </Grid>
         <Grid item sm={8}>
           <Grid container justify="space-between">
             <Grid item>
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
-              <StarIcon />
+              <Rating value={rating} precision={0.1} />
             </Grid>
-            <Grid item>{state.date}</Grid>
+            <Grid item>{date}</Grid>
           </Grid>
           <p>
-            <b>{state.title}</b>
+            <b>{title}</b>
           </p>
-          <p>{state.review}</p>
+          <p>{review}</p>
         </Grid>
       </Grid>
       <CustomDivider />
@@ -82,11 +69,7 @@ export function ProjectReviews(props) {
             <Typography variant="h3">4.4</Typography>
           </Grid>
           <Grid item>
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
-            <StarIcon />
+            <Rating value={4.4} precision={0.1} size="large" readOnly />
           </Grid>
           <Grid item>
             <span>(43 reviews)</span>
@@ -113,9 +96,9 @@ export function ProjectReviews(props) {
           </Grid>
         </Grid>
       </Grid>
-      <Review />
-      <Review />
-      <Review />
+      {reviews.map(review => {
+        return <Review {...review} />;
+      })}
     </div>
   );
 }

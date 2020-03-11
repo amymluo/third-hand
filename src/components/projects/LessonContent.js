@@ -1,13 +1,16 @@
 import React from "react";
-import { Typography, Grid } from "@material-ui/core";
+import { Typography, Grid, Button } from "@material-ui/core";
 import { lessons } from "../../data/lessonData";
+import { Link } from "react-router-dom";
 
 import "./lesson-content.scss";
 
 export function LessonContent(props) {
-  const { lessonId } = props.match.params;
-
+  const { projectId, lessonId } = props.match.params;
   const lessonData = lessons[lessonId];
+  const lessonNum = parseInt(lessonId);
+  const hasNextLesson = lessons.hasOwnProperty(lessonNum + 1);
+  const nextLessonId = lessonNum + 1;
 
   return (
     <div className="lesson-content">
@@ -31,6 +34,11 @@ export function LessonContent(props) {
             </Grid>
           );
         })}
+        {hasNextLesson && (
+          <Button variant="contained" color="primary">
+            <Link to={`/projects/${projectId}/${nextLessonId}`}>Next Step</Link>
+          </Button>
+        )}
       </div>
     </div>
   );
