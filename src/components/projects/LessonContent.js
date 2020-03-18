@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 import { lessons } from "../../data/lessonData";
 import { Link } from "react-router-dom";
+import cx from "classnames";
 
 import "./lesson-content.scss";
 import { CustomButton } from "../sharedComponents";
@@ -18,22 +19,41 @@ export function LessonContent(props) {
       <Typography variant="h1">{lessonData.title}</Typography>
       <div className="lesson-content__step-container">
         {lessonData.steps.map((step, index) => {
-          return (
-            <Grid
-              container
-              className="lesson-content__step"
-              key={index}
-              spacing={4}
-            >
-              <Grid item sm={6} className="lesson-content__step__text">
-                <div className="lesson-content__step__num">{index + 1}</div>
-                <Typography variant="body1">{`${step.text}`}</Typography>
+          if (step.type && step.type === "callout") {
+            return (
+              <div key={index} className="lesson-content__callout">
+                {step.text}
+              </div>
+            );
+          } else {
+            return (
+              <Grid
+                container
+                className="lesson-content__step"
+                key={index}
+                spacing={4}
+              >
+                <Grid
+                  item
+                  sm={6}
+                  className={cx("lesson-content__step__text", {
+                    block: step.title
+                  })}
+                >
+                  {step.num && (
+                    <div className="lesson-content__step__num">{step.num}</div>
+                  )}
+                  {step.title && (
+                    <Typography variant="h4">{step.title}</Typography>
+                  )}
+                  <Typography variant="body1">{step.text}</Typography>
+                </Grid>
+                <Grid item sm={6}>
+                  {step.img && <img src={step.img} alt="step" width="400px" />}
+                </Grid>
               </Grid>
-              <Grid item sm={6}>
-                {step.img && <img src={step.img} alt="step" />}
-              </Grid>
-            </Grid>
-          );
+            );
+          }
         })}
         {hasNextLesson && (
           <CustomButton

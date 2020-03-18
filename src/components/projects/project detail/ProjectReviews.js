@@ -7,7 +7,6 @@ import {
   MenuItem
 } from "@material-ui/core";
 import Rating from "@material-ui/lab/Rating";
-import StarIcon from "@material-ui/icons/Star";
 import { CustomDivider } from "../../ComponentExports";
 import { reviews } from "../../../data/reviews";
 

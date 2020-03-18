@@ -7,7 +7,7 @@ import cx from "classnames";
 import "./customize.scss";
 
 function SelectionRow(props) {
-  const { title, selected, options } = props;
+  const { title, selected, options, photos } = props;
   return (
     <div className="selection-row">
       <Typography variant="h4">{title}</Typography>
@@ -15,10 +15,13 @@ function SelectionRow(props) {
         {options.map((option, index) => {
           return (
             <Grid item key={index}>
-              <div
+              <img
                 className={cx("selection-option", {
                   "selection-option__selected": index === selected
                 })}
+                src={`/assets/icons/project detail/customize${photos[index]}`}
+                alt="option"
+                width="80pxs"
               />
               <Typography
                 variant="subtitle2"
@@ -91,11 +94,22 @@ export function CustomizeProject(props) {
               title={"Neckline"}
               selected={selections.neckline}
               options={["v-neck", "wide v-neck", "crew neck", "boat neck"]}
+              photos={[
+                "/neckline/vneck.png",
+                "/neckline/widev.png",
+                "/neckline/crew.png",
+                "/neckline/boat.png"
+              ]}
             />
             <SelectionRow
               title={"Sleeves"}
               selected={selections.sleeves}
               options={["short", "3/4 length", "long"]}
+              photos={[
+                "/sleeves/short.png",
+                "/sleeves/3-4.png",
+                "/sleeves/long.png"
+              ]}
             />
             <div className="selection-row">
               <Typography variant="h4">Length</Typography>
@@ -119,6 +133,12 @@ export function CustomizeProject(props) {
                 "smock pocket",
                 "ruffled bottom",
                 "side slit"
+              ]}
+              photos={[
+                "/add-ons/breastpocket.png",
+                "/add-ons/smock-pocket.png",
+                "/add-ons/ruffles.png",
+                "/add-ons/side-slit.png"
               ]}
             />
             <CustomButton

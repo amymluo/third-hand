@@ -18,7 +18,7 @@ import {
 } from "./components/ComponentExports";
 
 function App() {
-  const [isAuthenticated, setAuthenticated] = React.useState(false); // false
+  const [isAuthenticated, setAuthenticated] = React.useState(true); // false
 
   const login = () => {
     setAuthenticated(true);

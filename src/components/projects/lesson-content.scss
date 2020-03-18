@@ -3,12 +3,17 @@
 .lesson-content {
     padding: 48px 84px;
 
+
     &__step {
-        margin-bottom: 24px;
+        margin-bottom: 36px !important;
 
 
         &__text {
             display: flex;
+
+            &.block {
+                display: block;
+            }
 
             p {
                 margin-top: 8px;
