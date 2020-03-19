@@ -4,6 +4,28 @@
     padding: 48px 84px;
 
 
+    &__callout {
+        display: flex;
+        background-color: $blush;
+        white-space: pre-wrap;
+        padding: 24px 48px;
+        align-items: center;
+        margin-bottom: 36px;
+
+        img {
+            margin-right: 24px;
+        }
+
+        &.block {
+            display: block;
+        }
+
+        &__text {
+            font-weight: 600;
+        }
+    }
+
+
     &__step {
         margin-bottom: 36px !important;
 

@@ -21,8 +21,16 @@ export function LessonContent(props) {
         {lessonData.steps.map((step, index) => {
           if (step.type && step.type === "callout") {
             return (
-              <div key={index} className="lesson-content__callout">
-                {step.text}
+              <div
+                key={index}
+                className={cx("lesson-content__callout", { block: step.title })}
+              >
+                {step.title && (
+                  <Typography variant="h4">{step.title}</Typography>
+                )}
+                {step.icon && <img src={step.icon} alt="type" width="48px" />}
+
+                <div className="lesson-content__callout__text">{step.text}</div>
               </div>
             );
           } else {
@@ -56,13 +64,15 @@ export function LessonContent(props) {
           }
         })}
         {hasNextLesson && (
-          <CustomButton
-            variant="contained"
-            color="primary"
-            style={{ marginTop: "16px" }}
-          >
-            <Link to={`/projects/${projectId}/${nextLessonId}`}>Next Step</Link>
-          </CustomButton>
+          <Link to={`/projects/${projectId}/${nextLessonId}`}>
+            <CustomButton
+              variant="contained"
+              color="primary"
+              style={{ marginTop: "16px" }}
+            >
+              Next Step
+            </CustomButton>
+          </Link>
         )}
       </div>
     </div>

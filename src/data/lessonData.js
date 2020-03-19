@@ -49,7 +49,7 @@ export const lessons = {
       },
       {
         type: "callout",
-        icon: "",
+        icon: "/assets/icons/curriculum icons/heart.png",
         text:
           "Elongate the life of the clothing you’ve made by learning what the needs of each garment and fiber type are, and always following washing instructions."
       },
@@ -78,7 +78,7 @@ export const lessons = {
       },
       {
         type: "callout",
-        icon: "/assets/icons/curriculum icons/heart.png",
+        icon: "/assets/icons/curriculum icons/recycle.png",
         text:
           "Fabric scraps can be used to practice new sewing techniques, patch up holes in your clothing, or for making scrunchies, scarves, headbands, or anything else you can think of."
       }
@@ -315,7 +315,7 @@ export const lessons = {
         num: 2,
         text:
           "Edgestitch close to the fold all the way around the hem. Make sure to keep the corners tidy by folding in any stray threads from the bottom corner raw edge of the hem. ",
-        img: "/assets/photos/curriculum/9/9-1.png"
+        img: "/assets/photos/curriculum/9/9-3.png"
       },
       {
         type: "callout",
