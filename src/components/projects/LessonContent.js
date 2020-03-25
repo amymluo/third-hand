@@ -6,8 +6,7 @@ import {
   List,
   ListItem,
   IconButton,
-  ListItemText,
-  Divider
+  ListItemText
 } from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { lessons } from "../../data/lessonData";
@@ -42,11 +41,19 @@ export function LessonContent(props) {
       onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
+      <Typography variant="h4" style={{ margin: "24px 16px 16px 16px" }}>
+        Lessons
+      </Typography>
       <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
+        {Object.values(lessons).map(lesson => (
+          <Link
+            to={`/projects/${projectId}/${lesson.lessonId}`}
+            key={lesson.lessonId}
+          >
+            <ListItem button>
+              <ListItemText primary={`${lesson.lessonId}. ${lesson.title}`} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
