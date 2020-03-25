@@ -1,5 +1,14 @@
 import React from "react";
-import { Typography, Grid, Drawer } from "@material-ui/core";
+import {
+  Typography,
+  Grid,
+  Drawer,
+  List,
+  ListItem,
+  IconButton,
+  ListItemText,
+  Divider
+} from "@material-ui/core";
 import MenuIcon from "@material-ui/icons/Menu";
 import { lessons } from "../../data/lessonData";
 import { Link } from "react-router-dom";
@@ -13,6 +22,35 @@ export function LessonContent(props) {
   const lessonData = lessons[lessonId];
   const lessonNum = parseInt(lessonId);
   const hasNextLesson = lessons.hasOwnProperty(lessonNum + 1);
+
+  const [menuOpen, setMenu] = React.useState(false);
+
+  const toggleDrawer = open => event => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
+
+    setMenu(open);
+  };
+
+  const list = (
+    <div
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
 
   return (
     <React.Fragment>
@@ -77,7 +115,12 @@ export function LessonContent(props) {
       <div className="lesson-content__nav">
         <Grid container justify="space-between" alignItems="center">
           <Grid item className="lesson-content__nav__menu">
-            <MenuIcon style={{ marginRight: "16px" }} />
+            <IconButton
+              onClick={toggleDrawer(true)}
+              style={{ marginRight: "16px" }}
+            >
+              <MenuIcon />
+            </IconButton>
             {lessonId}. {lessonData.title}
           </Grid>
           <Grid item className="lesson-content__nav__buttons">
@@ -101,6 +144,9 @@ export function LessonContent(props) {
           </Grid>
         </Grid>
       </div>
+      <Drawer anchor={"left"} open={menuOpen} onClose={toggleDrawer(false)}>
+        {list}
+      </Drawer>
     </React.Fragment>
   );
 }
