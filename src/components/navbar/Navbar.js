@@ -55,7 +55,9 @@ export function Navbar(props) {
               <Link to="/dashboard">My Projects</Link>
             </Grid>
             <Grid item className="tab">
-              <CartIcon fontSize="large" />
+              <Link to="/cart">
+                <CartIcon fontSize="large" />
+              </Link>
             </Grid>
             <Grid item className="tab">
               <div className="navbar-user" onClick={signOut}>

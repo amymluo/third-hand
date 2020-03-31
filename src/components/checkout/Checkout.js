@@ -15,7 +15,7 @@ const ExpansionPanel = withStyles({
     "&:not(:last-child)": {
       borderBottom: 0
     },
-    "&:first-child": {
+    "&:nth-child(2)": {
       borderTop: 0
     },
     "&:before": {
@@ -63,12 +63,14 @@ export function Checkout(props) {
   };
   return (
     <div className="checkout">
-      <div className="checkout__header">
-        <Typography variant="h1">Checkout</Typography>
-        <CustomButton>Back to shopping</CustomButton>
-      </div>
       <Grid container spacing={8}>
         <Grid item sm={6}>
+          <div className="checkout__header">
+            <Typography variant="h1" style={{ margin: 0 }}>
+              Checkout
+            </Typography>
+            <CustomButton>Back to shopping</CustomButton>
+          </div>
           <ExpansionPanel
             square
             expanded={expanded === "panel1"}

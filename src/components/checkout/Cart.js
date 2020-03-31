@@ -3,6 +3,7 @@ import { Typography, Grid } from "@material-ui/core";
 import { CustomButton, CustomDivider } from "../ComponentExports";
 import DeleteIcon from "@material-ui/icons/Delete";
 import CreateIcon from "@material-ui/icons/Create";
+import { Link } from "react-router-dom";
 
 import "./cart.scss";
 
@@ -31,12 +32,16 @@ export function Cart(props) {
           />
         </Grid>
         <Grid item sm={6}>
-          <div className="heading-row">
+          <div className="your-cart__heading-row">
             <Typography variant="h3">Boxy T-Shirt</Typography>
-            <CreateIcon /> <DeleteIcon />
+            <div className="icon-row">
+              <CreateIcon /> <DeleteIcon />
+            </div>
           </div>
-          <span className="category">Color</span>
-          <span className="color-swatch" /> Mint
+          <div className="your-cart__color-row">
+            <span className="category">Color</span>
+            <div className="your-cart__color-swatch" /> Mint
+          </div>
           <Grid container spacing={5}>
             <Grid item xs={6}>
               <div className="category">Size</div>
@@ -70,9 +75,15 @@ export function Cart(props) {
       </Grid>
       <CustomDivider />
       <Typography variant="h3">Total Price: $24.00</Typography>
-      <CustomButton variant="contained" color="primary">
-        Check Out
-      </CustomButton>
+      <Link to="/checkout">
+        <CustomButton
+          variant="contained"
+          color="primary"
+          style={{ marginTop: "24px" }}
+        >
+          Check Out
+        </CustomButton>
+      </Link>
     </div>
   );
 }

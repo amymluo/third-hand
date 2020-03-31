@@ -1,3 +1,24 @@
 .your-cart {
     padding: 48px 84px;
+
+    &__heading-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__color-swatch {
+        width: 21px;
+        height: 21px;
+        background-color: #B8C8BF;
+        border-radius: 50%;
+        border: 2px solid black;
+        margin: 0 5px 0 8px;
+    }
+
+    &__color-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        margin-top: 8px;
+    }
 }

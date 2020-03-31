@@ -1,3 +1,11 @@
 .checkout {
     padding: 48px 84px;
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-bottom: 48px;
+    }
 }
