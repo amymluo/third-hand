@@ -119,7 +119,7 @@ export function Landing(props) {
         >
           <Link to="/projects">See More</Link>
         </CustomButton>
-        <Grid container spacing={10}>
+        <Grid container spacing={10} justify="center">
           <Grid item>
             <ProjectThumbnail projectId={0} />
           </Grid>
@@ -147,7 +147,7 @@ export function Landing(props) {
         >
           <Link to="/projects">See More</Link>
         </CustomButton>
-        <Grid container spacing={10}>
+        <Grid container spacing={10} justify="center">
           <Grid item>
             <ProjectThumbnail projectId={3} />
           </Grid>

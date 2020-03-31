@@ -25,8 +25,55 @@ export function ProjectDetail(props) {
 
   return (
     <div className="project-detail">
-      <div className="project-detail__overview">
+      <Grid
+        container
+        spacing={5}
+        className="project-detail__overview"
+        style={{ width: "100%" }}
+      >
+        <Grid item sm={6}>
+          <img
+            src="/assets/photos/project listings/greenshirt.png"
+            alt="project img"
+            width="100%"
+          />
+        </Grid>
         <Grid
+          item
+          sm={6}
+          style={{ paddingRight: "48px", marginBottom: "24px" }}
+        >
+          <div className="project-detail__overview__heading">
+            <LevelTag level={1} />
+            <span>Requires a sewing machine</span>
+          </div>
+          <Typography variant="h1" style={{ marginBottom: "24px" }}>
+            Boxy T-Shirt
+          </Typography>
+          {props.isAuthenticated ? (
+            <Link to={"/projects/1/1"}>
+              <CustomButton variant="contained" color="primary">
+                Resume
+              </CustomButton>
+            </Link>
+          ) : (
+            <CustomButton
+              variant="contained"
+              color="primary"
+              onClick={handleClickOpen}
+            >
+              customize & add to cart
+            </CustomButton>
+          )}
+          <Typography variant="body1" style={{ margin: "24px 0" }}>
+            Practice your sewing skills with this wardrobe staple. Customize the
+            pattern below for a shirt that is truly one-of-a-kind. With
+            easy-to-follow lessons suitable for anybody who knows how to use a
+            sewing machine, you’ll be rocking a new shirt in no time.
+          </Typography>
+          <LessonOutline />
+        </Grid>
+        {/* <Grid
           container
           className="project-detail__overview__heading"
           justify="space-between"
@@ -71,8 +118,8 @@ export function ProjectDetail(props) {
               height="420px"
             />
           </Grid>
-        </Grid>
-      </div>
+            </Grid> */}
+      </Grid>
       <div className="project-detail__kit-contents">
         <div className="project-detail__kit-contents__left">
           <Typography variant="h4">Includes</Typography>

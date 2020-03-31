@@ -64,6 +64,9 @@
         border-top: 3px solid black;
         padding: 16px 24px;
         box-sizing: border-box;
+        position: sticky;
+        bottom: 0;
+        background-color: white;
 
         &__menu {
             display: flex;

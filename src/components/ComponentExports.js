@@ -10,6 +10,8 @@ import { CustomizeProject } from "./projects/project detail/customize/CustomizeP
 import { LessonContent } from "./projects/LessonContent";
 import { Navbar } from "./navbar/Navbar";
 import { Resources } from "./Resources";
+import { Cart } from "./checkout/Cart";
+import { Checkout } from "./checkout/Checkout";
 import { LevelTag, CustomButton, CustomDivider } from "./sharedComponents";
 
 export {
@@ -23,6 +25,8 @@ export {
   LessonContent,
   Navbar,
   Resources,
+  Cart,
+  Checkout,
   LevelTag,
   CustomButton,
   CustomDivider,

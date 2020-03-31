@@ -35,11 +35,9 @@ export function ProjectThumbnail(props) {
       <Typography variant="body1" style={{ marginBottom: "8px" }}>
         {projectData.description}
       </Typography>
-      <CustomButton variant="outlined">
-        <Link to={`/projects/${props.projectId}`}>
-          {projectData.buttonText}
-        </Link>
-      </CustomButton>
+      <Link to={`/projects/${props.projectId}`}>
+        <CustomButton variant="outlined">{projectData.buttonText}</CustomButton>
+      </Link>
     </div>
   );
 }

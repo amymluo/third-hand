@@ -7,8 +7,7 @@ export function LessonOutline(props) {
       className="lesson-outline"
       style={{
         border: "3px solid black",
-        padding: "24px 40px 20px 24px",
-        width: "fit-content"
+        padding: "24px 40px 20px 24px"
       }}
     >
       <Typography variant="h4">Lesson Outline</Typography>

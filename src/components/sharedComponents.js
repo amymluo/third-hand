@@ -38,6 +38,6 @@ export const CustomButton = withStyles({
 export const CustomDivider = () => (
   <Divider
     variant="middle"
-    style={{ backgroundColor: "black", height: "3px", margin: "64px 0" }}
+    style={{ backgroundColor: "black", height: "3px", margin: "24px 0" }}
   />
 );

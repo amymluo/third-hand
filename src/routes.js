@@ -15,9 +15,10 @@ import {
   Resources,
   Landing,
   Navbar,
-  LessonContent
+  LessonContent,
+  Cart,
+  Checkout
 } from "./components/ComponentExports";
-//import ScrollToTop from "./scroll";
 
 class ScrollToTop extends React.Component {
   componentDidUpdate(prevProps) {
@@ -80,6 +81,8 @@ function App() {
                 )
               }
             />
+            <Route exact path="/cart" render={() => <Cart />} />
+            <Route exact path="/checkout" render={() => <Checkout />} />
             <Route exact path="/resources" render={() => <Resources />} />
             <Route
               exact
