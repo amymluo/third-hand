@@ -28,7 +28,7 @@ const theme = createMuiTheme({
     },
     h4: {
       fontFamily: "Poppins",
-      fontWeight: 700,
+      fontWeight: 600,
       fontSize: 18,
       color: "black"
     },
