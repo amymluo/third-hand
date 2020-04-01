@@ -35,7 +35,7 @@ class ScrollToTop extends React.Component {
 const Scroll = withRouter(ScrollToTop);
 
 function App() {
-  const [isAuthenticated, setAuthenticated] = React.useState(true); // false
+  const [isAuthenticated, setAuthenticated] = React.useState(false); // false
 
   const login = () => {
     setAuthenticated(true);
