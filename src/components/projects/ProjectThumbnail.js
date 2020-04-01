@@ -12,17 +12,19 @@ export function ProjectThumbnail(props) {
       className="project-thumbnail"
       style={{ width: "300px", position: "relative" }}
     >
-      <img
-        className="project-thumbnail__photo"
-        src={projectData.img}
-        style={{
-          width: "264px",
-          height: "325px",
-          marginTop: "36px",
-          marginBottom: "16px"
-        }}
-        alt="project thumbnail"
-      />
+      <Link to={`/projects/${props.projectId}`}>
+        <img
+          className="project-thumbnail__photo"
+          src={projectData.img}
+          style={{
+            width: "264px",
+            height: "325px",
+            marginTop: "36px",
+            marginBottom: "16px"
+          }}
+          alt="project thumbnail"
+        />
+      </Link>
       <div
         className="project-level"
         style={{ position: "absolute", top: "44px", right: "44px" }}

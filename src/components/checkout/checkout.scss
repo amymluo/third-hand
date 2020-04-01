@@ -8,4 +8,23 @@
 
         margin-bottom: 48px;
     }
+
+    &__shipping-option {
+        padding: 16px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid black;
+        border-radius: 4px;
+    }
+
+    &__expansion {
+        button {
+            margin-top: 24px;
+
+        }
+    }
+
+
+
 }

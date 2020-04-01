@@ -4,6 +4,7 @@ import ToggleButton from "@material-ui/lab/ToggleButton";
 import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
 import { CustomButton } from "../../../ComponentExports";
 import cx from "classnames";
+import { Link } from "react-router-dom";
 import "./customize.scss";
 
 function SelectionRow(props) {
@@ -194,9 +195,11 @@ export function CustomizeProject(props) {
               <div>See Size Chart</div>
             </Grid>
           </Grid>
-          <CustomButton variant="contained" color="primary" onClick={onClose}>
-            Add to cart
-          </CustomButton>
+          <Link to="/cart">
+            <CustomButton variant="contained" color="primary" onClick={onClose}>
+              Add to cart
+            </CustomButton>
+          </Link>
         </div>
       )}
     </Dialog>

@@ -34,9 +34,11 @@ export function Landing(props) {
           Sustainable sewing project kits that will help you love your clothes
           for longer
         </p>
-        <CustomButton variant="contained" color="primary">
-          Get Started
-        </CustomButton>
+        <Link to="/projects">
+          <CustomButton variant="contained" color="primary">
+            Get Started
+          </CustomButton>
+        </Link>
       </div>
 
       <Grid

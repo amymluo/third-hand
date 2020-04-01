@@ -74,16 +74,18 @@ export function Cart(props) {
         </Grid>
       </Grid>
       <CustomDivider />
-      <Typography variant="h3">Total Price: $24.00</Typography>
-      <Link to="/checkout">
-        <CustomButton
-          variant="contained"
-          color="primary"
-          style={{ marginTop: "24px" }}
-        >
-          Check Out
-        </CustomButton>
-      </Link>
+      <div style={{ float: "right" }}>
+        <Typography variant="h3">Total Price: $24.00</Typography>
+        <Link to="/checkout">
+          <CustomButton
+            variant="contained"
+            color="primary"
+            style={{ marginTop: "24px" }}
+          >
+            Check Out
+          </CustomButton>
+        </Link>
+      </div>
     </div>
   );
 }
