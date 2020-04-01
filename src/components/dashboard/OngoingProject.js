@@ -20,7 +20,11 @@ export default function OngoingProject() {
 
   return (
     <div className="ongoing-project">
-      <img src="tshirt.jpg" alt="project cover" width="250px" />
+      <img
+        src="/assets/photos/project listings/greenshirt.png"
+        alt="project cover"
+        width="250px"
+      />
       <div className="ongoing-project__content">
         <div className="ongoing-project__content__title-row">
           <div className="ongoing-project__content__title-row__title">
@@ -30,7 +34,7 @@ export default function OngoingProject() {
           <Typography variant="subtitle2">~ 2 hours left</Typography>
         </div>
         <Typography className="info-line" variant="subtitle1">
-          4 / 9 Shoulder Seams
+          6 / 9 Sew Sides
         </Typography>
         <CustomProgress
           className="info-line"
@@ -42,7 +46,7 @@ export default function OngoingProject() {
             <Link to="/projects/1">Project Details</Link>
           </CustomButton>
           <CustomButton variant="contained" color="primary">
-            <Link to="/projects/1/1">Resume</Link>
+            <Link to="/projects/1/6">Resume</Link>
           </CustomButton>
         </div>
       </div>
