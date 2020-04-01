@@ -6,6 +6,7 @@ import MuiExpansionPanel from "@material-ui/core/ExpansionPanel";
 import MuiExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import MuiExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import { CustomButton } from "../ComponentExports";
+import { Link } from "react-router-dom";
 import "./checkout.scss";
 
 const ExpansionPanel = withStyles({
@@ -71,7 +72,9 @@ export function Checkout(props) {
             <Typography variant="h1" style={{ margin: 0 }}>
               Checkout
             </Typography>
-            <CustomButton>Back to shopping</CustomButton>
+            <Link to="/projects">
+              <CustomButton>Back to shopping</CustomButton>
+            </Link>
           </div>
           <div className="checkout__expansion">
             <ExpansionPanel
@@ -98,7 +101,10 @@ export function Checkout(props) {
                   <CustomButton
                     variant="contained"
                     color="primary"
-                    onClick={handleChange("panel2")}
+                    onClick={() => {
+                      handleChange("panel2")();
+                      props.login();
+                    }}
                     style={{ marginRight: "16px" }}
                   >
                     Log in

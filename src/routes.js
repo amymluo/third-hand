@@ -82,7 +82,11 @@ function App() {
               }
             />
             <Route exact path="/cart" render={() => <Cart />} />
-            <Route exact path="/checkout" render={() => <Checkout />} />
+            <Route
+              exact
+              path="/checkout"
+              render={() => <Checkout login={login} />}
+            />
             <Route exact path="/resources" render={() => <Resources />} />
             <Route
               exact
