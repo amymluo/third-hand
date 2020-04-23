@@ -96,6 +96,11 @@ function App() {
               }
             />
           </Switch>
+          <img
+            src="/assets/photos/homepage/footer.png"
+            alt="footer"
+            width="100%"
+          />
         </Scroll>
       </Router>
     </MuiThemeProvider>
