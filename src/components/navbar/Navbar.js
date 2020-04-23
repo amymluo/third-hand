@@ -73,11 +73,19 @@ export function Navbar(props) {
         ) : (
           <React.Fragment>
             <Grid item className="tab">
-              <CartIcon fontSize="large" />
+              <CartIcon />
             </Grid>
             <Grid item className="tab" style={{ padding: "0 12px" }}>
               <CustomButton variant="contained" onClick={login} size="small">
                 Sign Up
+              </CustomButton>
+              <CustomButton
+                variant="contained"
+                color="primary"
+                onClick={login}
+                size="small"
+              >
+                Login
               </CustomButton>
             </Grid>
           </React.Fragment>

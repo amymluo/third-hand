@@ -4,6 +4,7 @@ export const projects = {
     title: "Tote Bag,",
     description: "Recommended starter project for our beginner sewists",
     level: 0,
+    sewType: "assets/icons/home/sewing_machine.png",
     img: "/assets/photos/project listings/totebag.png",
     buttonText: "choose color - $16"
   },
@@ -12,6 +13,7 @@ export const projects = {
     title: "Boxy T-Shirt",
     description: "Practice your sewing skills with this wardrobe staple",
     level: 1,
+    sewType: "assets/icons/home/sewing_machine.png",
     img: "/assets/photos/project listings/greenshirt.png",
     buttonText: "customize shirt - $24"
   },
@@ -20,6 +22,7 @@ export const projects = {
     title: "Gathered Dress",
     description: "Recommended starter project for our beginner sewists",
     level: 1,
+    sewType: "assets/icons/home/sewing_machine.png",
     img: "/assets/photos/project listings/dress.png",
     buttonText: "customize dress - $24"
   },
@@ -28,6 +31,7 @@ export const projects = {
     title: "Visible Mending",
     description: "Recommended starter project for our beginner sewists",
     level: 1,
+    sewType: "assets/icons/home/needle.png",
     img: "/assets/photos/project listings/visiblemending.png",
     buttonText: "choose color - $8"
   },
@@ -36,6 +40,7 @@ export const projects = {
     title: "Floral Embroidery",
     description: "Recommended starter project for our beginner sewists",
     level: 2,
+    sewType: "assets/icons/home/needle.png",
     img: "/assets/photos/project listings/embroidery.png",
     buttonText: "customize design - $8"
   },
@@ -44,6 +49,7 @@ export const projects = {
     title: "Patching",
     description: "Recommended starter project for our beginner sewists",
     level: 1,
+    sewType: "assets/icons/home/needle.png",
     img: "/assets/photos/project listings/patch.png",
     buttonText: "choose color - $8"
   }

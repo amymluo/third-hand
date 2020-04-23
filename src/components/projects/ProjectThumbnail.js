@@ -31,10 +31,20 @@ export function ProjectThumbnail(props) {
       >
         <LevelTag level={projectData.level} />
       </div>
-      <Typography variant="h4" style={{ marginBottom: "8px" }}>
+      <Typography
+        variant="h4"
+        style={{ marginBottom: "8px", display: "inline" }}
+      >
         {projectData.title}
       </Typography>
-      <Typography variant="body1" style={{ marginBottom: "8px" }}>
+      <img
+        id="sew-type-icon"
+        src={projectData.sewType}
+        alt="sew type"
+        width="24px"
+        style={{ display: "inline", marginLeft: "8px" }}
+      />
+      <Typography variant="body1" style={{ marginBottom: "16px" }}>
         {projectData.description}
       </Typography>
       <Link to={`/projects/${props.projectId}`}>

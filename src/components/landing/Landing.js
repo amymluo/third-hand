@@ -36,7 +36,7 @@ export function Landing(props) {
         </p>
         <Link to="/projects">
           <CustomButton variant="contained" color="primary">
-            Get Started
+            select a project
           </CustomButton>
         </Link>
       </div>
@@ -45,6 +45,7 @@ export function Landing(props) {
         container
         className="landing__steps"
         style={{ flexWrap: "nowrap" }}
+        justify="center"
         spacing={10}
       >
         <Grid item>
