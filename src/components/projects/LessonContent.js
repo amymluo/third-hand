@@ -62,7 +62,11 @@ export function LessonContent(props) {
   return (
     <React.Fragment>
       <div className="lesson-content">
-        <Typography variant="h1">{lessonData.title}</Typography>
+        <div className="lesson-content__banner">
+          <img src={lessonData.banner} alt="banner" width="100%" />
+          <h1>{lessonData.title}</h1>
+        </div>
+
         <div className="lesson-content__step-container">
           {lessonData.steps.map((step, index) => {
             if (step.type && step.type === "callout") {
@@ -91,6 +95,11 @@ export function LessonContent(props) {
                   key={index}
                   spacing={10}
                 >
+                  <Grid item sm={6}>
+                    {step.img && (
+                      <img src={step.img} alt="step" width="400px" />
+                    )}
+                  </Grid>
                   <Grid
                     item
                     sm={6}
@@ -107,11 +116,6 @@ export function LessonContent(props) {
                       <Typography variant="h4">{step.title}</Typography>
                     )}
                     <Typography variant="body1">{step.text}</Typography>
-                  </Grid>
-                  <Grid item sm={6}>
-                    {step.img && (
-                      <img src={step.img} alt="step" width="400px" />
-                    )}
                   </Grid>
                 </Grid>
               );

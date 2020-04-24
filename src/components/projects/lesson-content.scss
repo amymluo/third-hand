@@ -3,6 +3,22 @@
 .lesson-content {
     padding: 48px 84px;
 
+    &__banner {
+        position: relative;
+        margin-bottom: 48px;
+
+        h1 {
+            color: white;
+            position: absolute;
+            top: 136px;
+            left: 36px;
+        }
+
+        img {
+            position: relative;
+        }
+    }
+
 
     &__callout {
         display: flex;
@@ -32,6 +48,7 @@
 
         &__text {
             display: flex;
+            padding-right: 84px !important;
 
             &.block {
                 display: block;

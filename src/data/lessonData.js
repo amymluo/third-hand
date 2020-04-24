@@ -3,6 +3,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 1,
     title: "Understanding your materials",
+    banner: "/assets/photos/curriculum/banners/banner1.png",
     steps: [
       {
         title: "Fabric",
@@ -40,6 +41,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 2,
     title: "Pattern Cutting",
+    banner: "/assets/photos/curriculum/banners/banner2.png",
     steps: [
       {
         num: 1,
@@ -88,6 +90,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 3,
     title: "Finish Body Edges",
+    banner: "/assets/photos/curriculum/banners/banner3.png",
     steps: [
       {
         num: 1,
@@ -101,6 +104,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 4,
     title: "Shoulder Seams",
+    banner: "/assets/photos/curriculum/banners/banner4.png",
     steps: [
       {
         num: 1,
@@ -131,6 +135,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 5,
     title: "Sew on Sleeves",
+    banner: "/assets/photos/curriculum/banners/banner5.png",
     steps: [
       {
         num: 1,
@@ -164,6 +169,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 6,
     title: "Sew Sides",
+    banner: "/assets/photos/curriculum/banners/banner6.png",
     steps: [
       {
         num: 1,
@@ -214,6 +220,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 7,
     title: "Hem Sleeve Openings",
+    banner: "/assets/photos/curriculum/banners/banner7.png",
     steps: [
       {
         num: 1,
@@ -238,6 +245,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 8,
     title: "Bind Neck",
+    banner: "/assets/photos/curriculum/banners/banner8.png",
     steps: [
       {
         type: "callout",
@@ -304,6 +312,7 @@ export const lessons = {
     projectId: 1,
     lessonId: 9,
     title: "Hem Bottom",
+    banner: "/assets/photos/curriculum/banners/banner9.png",
     steps: [
       {
         num: 1,

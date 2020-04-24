@@ -73,13 +73,7 @@ function App() {
             <Route
               exact
               path="/projects/:projectId/:lessonId"
-              render={props =>
-                isAuthenticated ? (
-                  <LessonContent {...props} />
-                ) : (
-                  <Redirect to={`/projects/${props.match.params.projectId}`} />
-                )
-              }
+              render={props => <LessonContent {...props} />}
             />
             <Route exact path="/cart" render={() => <Cart />} />
             <Route
