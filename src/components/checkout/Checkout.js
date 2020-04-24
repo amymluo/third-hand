@@ -220,22 +220,24 @@ export function Checkout(props) {
                   acknowledge that I have read the Privacy Policy. Shipping and
                   promotions calculated in checkout.
                 </Typography>
-                <CustomButton
-                  variant="contained"
-                  color="primary"
-                  onClick={handleChange("panel5")}
-                >
-                  Place Order
-                </CustomButton>
+                <Link to="/dashboard">
+                  <CustomButton
+                    variant="contained"
+                    color="primary"
+                    onClick={handleChange("panel5")}
+                  >
+                    Place Order
+                  </CustomButton>
+                </Link>
               </ExpansionPanelDetails>
             </ExpansionPanel>
           </div>
         </Grid>
         <Grid item sm={6}>
-          <Typography variant="h4" style={{ marginTop: 96 }}>
+          <Typography variant="h4" style={{ marginTop: 96, marginBottom: 24 }}>
             Order Summary
           </Typography>
-          <div
+          {/* <div
             style={{
               width: 300,
               height: 400,
@@ -243,6 +245,11 @@ export function Checkout(props) {
               borderRadius: 8,
               marginTop: 16
             }}
+          /> */}
+          <img
+            src="/assets/photos/checkout/order_sum.png"
+            alt="order summary"
+            width="90%"
           />
         </Grid>
       </Grid>

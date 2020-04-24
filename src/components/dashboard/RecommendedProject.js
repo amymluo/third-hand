@@ -3,20 +3,15 @@ import { Typography } from "@material-ui/core";
 import { LevelTag, CustomButton } from "../ComponentExports";
 import { Link } from "react-router-dom";
 import "./recommended.scss";
+import { ProjectThumbnail } from "../projects/ProjectThumbnail";
 
 export function RecommendedProject(props) {
   return (
     <div className="recommended-project">
-      <Typography variant="body1">Because you learned pinning...</Typography>
-      <div className="recommended-project__thumbnail">
-        <LevelTag level={0} />
-      </div>
-      <Typography variant="h4" style={{ marginBottom: "24px" }}>
-        Other Easy Project
+      <Typography variant="body1">
+        Because you learned <b>{props.skill}...</b>
       </Typography>
-      <CustomButton variant="outlined">
-        <Link to="/projects/1">Choose color - $16 </Link>
-      </CustomButton>
+      <ProjectThumbnail projectId={props.projectId} />
     </div>
   );
 }

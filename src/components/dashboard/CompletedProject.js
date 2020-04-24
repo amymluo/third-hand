@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 import "./ongoing.scss";
 
-export default function OngoingProject() {
+export function CompletedProject() {
   const CustomProgress = withStyles({
     root: {
       height: 16,
@@ -21,7 +21,7 @@ export default function OngoingProject() {
   return (
     <div className="ongoing-project">
       <img
-        src="/assets/photos/project listings/greenshirt.png"
+        src="/assets/photos/project listings/totebag.png"
         alt="project cover"
         width="250px"
       />
@@ -31,27 +31,22 @@ export default function OngoingProject() {
             <Typography variant="h3">Boxy T-Shirt</Typography>
             <LevelTag level={1} />
           </div>
-          <Typography variant="subtitle2">~ 2 hours left</Typography>
         </div>
         <Typography className="info-line" variant="subtitle1">
-          6 / 9 Sew Sides
+          9 / 9 Complete
         </Typography>
         <CustomProgress
           className="info-line"
           variant="determinate"
-          value={66}
+          value={100}
         />
         <div className="ongoing-project__content__button-row">
-          <Link to="/projects/1">
-            <CustomButton variant="outlined" style={{ marginRight: "24px" }}>
-              Project Details
-            </CustomButton>
-          </Link>
-          <Link to="/projects/1/6">
-            <CustomButton variant="contained" color="primary">
-              Resume
-            </CustomButton>
-          </Link>
+          <CustomButton variant="outlined" style={{ marginRight: "24px" }}>
+            <Link to="/projects/1">Share on Gallery</Link>
+          </CustomButton>
+          <CustomButton variant="contained" color="primary">
+            Review
+          </CustomButton>
         </div>
       </div>
     </div>

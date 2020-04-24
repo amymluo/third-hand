@@ -2,6 +2,7 @@ import React from "react";
 import { Typography, Grid } from "@material-ui/core";
 import OngoingProject from "./OngoingProject";
 import { RecommendedProject } from "./RecommendedProject";
+import { CompletedProject } from "./CompletedProject";
 import "./dashboard.scss";
 
 export function Dashboard(props) {
@@ -10,23 +11,23 @@ export function Dashboard(props) {
       <Typography variant="h1">My Projects</Typography>
       <div className="dashboard-section">
         <Typography variant="h2">In Progress</Typography>
-        <Grid container spacing={8} direction="column">
+        <Grid container spacing={10} direction="column">
           <Grid item>
             <OngoingProject />
           </Grid>
         </Grid>
       </div>
       <div className="dashboard-section">
-        <Typography variant="h2">Recommended Projects</Typography>
-        <Grid container spacing={8}>
+        <Typography variant="h2">Recommended For You</Typography>
+        <Grid container spacing={10} justify="center">
           <Grid item>
-            <RecommendedProject />
+            <RecommendedProject skill={"pinning"} projectId={5} />
           </Grid>
           <Grid item>
-            <RecommendedProject />
+            <RecommendedProject skill={"hemming"} projectId={2} />
           </Grid>
           <Grid item>
-            <RecommendedProject />
+            <RecommendedProject skill={"hand stitching"} projectId={4} />
           </Grid>
         </Grid>
       </div>
@@ -34,10 +35,7 @@ export function Dashboard(props) {
         <Typography variant="h2">Completed Projects</Typography>
         <Grid container spacing={10} direction="column">
           <Grid item>
-            <OngoingProject />
-          </Grid>
-          <Grid item>
-            <OngoingProject />
+            <CompletedProject />
           </Grid>
         </Grid>
       </div>
