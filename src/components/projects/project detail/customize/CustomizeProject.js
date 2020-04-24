@@ -1,5 +1,12 @@
 import React from "react";
-import { Dialog, Tabs, Tab, Typography, Grid } from "@material-ui/core";
+import {
+  Dialog,
+  Tabs,
+  Tab,
+  Typography,
+  Grid,
+  TextField
+} from "@material-ui/core";
 import ToggleButton from "@material-ui/lab/ToggleButton";
 import ToggleButtonGroup from "@material-ui/lab/ToggleButtonGroup";
 import { CustomButton } from "../../../ComponentExports";
@@ -43,7 +50,7 @@ export function CustomizeProject(props) {
   const [value, setValue] = React.useState(0);
   const [selections, setSelection] = React.useState({
     neckline: 0,
-    sleeves: 0,
+    sleeves: 2,
     length: 0,
     addons: null,
     color: 0,
@@ -154,7 +161,15 @@ export function CustomizeProject(props) {
       ) : (
         ///////////////////////////////// SELECT SIZE ///////////////////////////////////
         <div className="customize-dialog__tab">
-          <Grid container className="standard-size">
+          <Grid
+            container
+            className="standard-size"
+            style={{
+              padding: "36px 16px",
+              margin: "24px 0",
+              border: "2px black solid"
+            }}
+          >
             <Grid item sm={6}>
               <Typography variant="h4">Select a Standard Size</Typography>
             </Grid>
@@ -176,23 +191,40 @@ export function CustomizeProject(props) {
               <div>See Size Chart</div>
             </Grid>
           </Grid>
-          <Grid container className="custom-size">
+          <Grid
+            container
+            className="custom-size"
+            alignContent="center"
+            style={{
+              padding: "36px 16px",
+              margin: "24px 0",
+              backgroundColor: "#F1F1F1"
+            }}
+          >
             <Grid item sm={6}>
               <Typography variant="h4">Enter Custom Measurements</Typography>
             </Grid>
             <Grid item sm={6}>
-              <div className="toggle-group">
-                <ToggleButtonGroup
-                  value={selections.size}
-                  exclusive
-                  onChange={handleSize}
-                >
-                  <ToggleButton value={0}>crop</ToggleButton>
-                  <ToggleButton value={1}>regular</ToggleButton>
-                  <ToggleButton value={2}>long</ToggleButton>
-                </ToggleButtonGroup>
-              </div>
-              <div>See Size Chart</div>
+              <TextField
+                variant="filled"
+                label="Bust"
+                style={{ display: "block", marginBottom: "16px" }}
+              />
+              <TextField
+                variant="filled"
+                label="Chest"
+                style={{ display: "block", marginBottom: "16px" }}
+              />
+              <TextField
+                variant="filled"
+                label="Shoulder"
+                style={{ display: "block", marginBottom: "16px" }}
+              />
+              <TextField
+                variant="filled"
+                label="Height"
+                style={{ display: "block", marginBottom: "16px" }}
+              />
             </Grid>
           </Grid>
           <Link to="/cart">

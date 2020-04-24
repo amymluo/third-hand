@@ -9,6 +9,7 @@ import {
   Commitment
 } from "../../ComponentExports";
 import { Grid, Typography } from "@material-ui/core";
+import Rating from "@material-ui/lab/Rating";
 import { Link } from "react-router-dom";
 import "./project-detail.scss";
 
@@ -25,24 +26,15 @@ export function ProjectDetail(props) {
 
   return (
     <div className="project-detail">
-      <Grid
-        container
-        spacing={5}
-        className="project-detail__overview"
-        style={{ width: "100%" }}
-      >
+      <Grid container spacing={5} className="project-detail__overview">
         <Grid item sm={6}>
           <img
             src="/assets/photos/project listings/greenshirt.png"
             alt="project img"
-            width="100%"
+            width="500px"
           />
         </Grid>
-        <Grid
-          item
-          sm={6}
-          style={{ paddingRight: "48px", marginBottom: "24px" }}
-        >
+        <Grid item sm={6} style={{ marginBottom: "24px" }}>
           <div className="project-detail__overview__heading">
             <LevelTag level={1} />
             <span>Requires a sewing machine</span>
@@ -50,6 +42,19 @@ export function ProjectDetail(props) {
           <Typography variant="h1" style={{ marginBottom: "24px" }}>
             Boxy T-Shirt
           </Typography>
+          <Rating
+            value={4.4}
+            precision={0.1}
+            size="large"
+            readOnly
+            style={{ marginTop: "-8px" }}
+          />
+          <p style={{ margin: "24px 0 44px 0", fontSize: "18px" }}>
+            Practice your sewing skills with this wardrobe staple. Customize the
+            pattern below for a shirt that is truly one-of-a-kind. With
+            easy-to-follow lessons suitable for anybody who knows how to use a
+            sewing machine, you’ll be rocking a new shirt in no time.
+          </p>
           {props.isAuthenticated ? (
             <Link to={"/projects/1/1"}>
               <CustomButton variant="contained" color="primary">
@@ -62,65 +67,36 @@ export function ProjectDetail(props) {
               color="primary"
               onClick={handleClickOpen}
             >
-              customize & add to cart
+              customize size & style
             </CustomButton>
           )}
-          <Typography variant="body1" style={{ margin: "24px 0" }}>
-            Practice your sewing skills with this wardrobe staple. Customize the
-            pattern below for a shirt that is truly one-of-a-kind. With
-            easy-to-follow lessons suitable for anybody who knows how to use a
-            sewing machine, you’ll be rocking a new shirt in no time.
-          </Typography>
           <LessonOutline />
         </Grid>
-        {/* <Grid
-          container
-          className="project-detail__overview__heading"
-          justify="space-between"
-          alignItems="center"
-        >
-          <Grid item>
-            <div className="project-detail__overview__title">
-              <Typography variant="h1">Boxy T-Shirt Kit</Typography>
-              <LevelTag level={1}></LevelTag>
-            </div>
-          </Grid>
-          <Grid item>
-            {props.isAuthenticated ? (
-              <CustomButton variant="contained" color="primary">
-                <Link to={"/projects/1/1"}>Resume</Link>
-              </CustomButton>
-            ) : (
-              <CustomButton
-                variant="contained"
-                color="primary"
-                onClick={handleClickOpen}
-              >
-                customize & add to cart
-              </CustomButton>
-            )}
-          </Grid>
-        </Grid>
-        <Typography variant="body1" style={{ marginBottom: "36px" }}>
-          Practice your sewing skills with this wardrobe staple. Customize the
-          pattern below for a shirt that is truly one-of-a-kind. With
-          easy-to-follow lessons suitable for anybody who knows how to use a
-          sewing machine, you’ll be rocking a new shirt in no time.
-        </Typography>
-        <Grid container justify="space-between">
-          <Grid item>
-            <LessonOutline />
-          </Grid>
-          <Grid item>
-            <img
-              src="/assets/photos/project listings/greenshirt.png"
-              alt="project img"
-              height="420px"
-            />
-          </Grid>
-            </Grid> */}
       </Grid>
-      <div className="project-detail__kit-contents">
+      <Grid container className="project-detail__kit-contents">
+        <Grid item sm="4">
+          <img
+            src="/assets/photos/project detail/materials.png"
+            alt="materials"
+            width="100%"
+          />
+        </Grid>
+        <Grid item sm="8" style={{ padding: 36 }}>
+          <Typography variant="h3">What You Get</Typography>
+          <ul style={{ fontSize: "18px" }}>
+            <li>
+              The right amount of fabric you will need for your custom project
+              (around 2 yards)
+            </li>
+            <li>2 spools organic cotton thread</li>
+            <li>
+              A printed paper pattern specific to your size and style selections
+            </li>
+            <li>Access to step-by-step online instructions</li>
+          </ul>
+        </Grid>
+      </Grid>
+      {/* <div className="project-detail__kit-contents">
         <div className="project-detail__kit-contents__left">
           <Typography variant="h4">Includes</Typography>
           <Grid container spacing={6} justify="space-evenly">
@@ -165,7 +141,7 @@ export function ProjectDetail(props) {
             <li>Access to step-by-step online instructions</li>
           </ul>
         </div>
-      </div>
+      </div> */}
       <div className="project-detail__section">
         <ProjectReviews />
       </div>

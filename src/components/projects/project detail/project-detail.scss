@@ -1,12 +1,15 @@
 @import '../../../styles/variables.scss';
 
 .project-detail {
+
+    margin: 48px 84px;
+
     &__overview {
+        margin-bottom: 36px !important;
 
         &__heading {
             display: flex;
             align-items: center;
-            padding-top: 36px;
             margin-bottom: 16px;
 
             span {
@@ -25,13 +28,11 @@
     }
 
     &__kit-contents {
-        width: 100%;
         display: flex;
-        height: 270px;
+        background-color: $blush;
 
-        h4 {
-            text-align: center;
-            margin-bottom: 16px;
+        li {
+            margin-top: 8px;
         }
 
         &__left {
@@ -71,7 +72,7 @@
     }
 
     &__section {
-        padding: 48px 180px;
+        padding: 48px 64px;
 
         .project-reviews {
             &__header {

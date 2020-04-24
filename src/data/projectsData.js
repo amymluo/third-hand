@@ -1,7 +1,7 @@
 export const projects = {
   0: {
     projectId: 0,
-    title: "Tote Bag,",
+    title: "Tote Bag",
     description: "Recommended starter project for our beginner sewists",
     level: 0,
     sewType: "assets/icons/home/sewing_machine.png",
